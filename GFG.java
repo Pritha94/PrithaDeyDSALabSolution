@@ -1,4 +1,3 @@
-package assignmentByAritra;
 
 
 	import java.io.*;
@@ -21,8 +20,7 @@ package assignmentByAritra;
 	    int data; 
 	}; 
 	 
-	// Function to create a new 
-	// Binary node 
+
 
 	static Node newNode(int data) 
 	{ 
@@ -40,19 +38,13 @@ package assignmentByAritra;
 	    return temp; 
 	} 
 	 
-	// Function to find and return the 
-	// longest path 
+
 
 	public static ArrayList<Integer> longestPath(Node root)
 	{
 
 	     
 
-	    // If root is null means there 
-
-	    // is no binary tree so 
-
-	    // return a empty vector 
 
 	    if(root == null)
 
@@ -76,11 +68,7 @@ package assignmentByAritra;
 
 	    ArrayList<Integer> left = longestPath(root.left);
 
-	     
 
-	    // Compare the size of the two ArrayList 
-
-	    // and insert current node accordingly 
 
 	    if(right.size() < left.size())
 
@@ -100,7 +88,7 @@ package assignmentByAritra;
 
 	     
 
-	    // Return the appropriate ArrayList
+	
 
 	    return (left.size() > 
 
