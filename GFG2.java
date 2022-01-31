@@ -1,8 +1,4 @@
-package assignmentByAritra;
 
-
-	// Java program to check if parenthesis are
-	// balanced or not in an expression.
 
 	import java.util.Arrays;
 	 
@@ -31,9 +27,7 @@ package assignmentByAritra;
 	    }
 	 
 
-	    // function to check if parenthesis are
-
-	    // balanced.
+	  
 
 	    static boolean check(char expr[], int n)
 
@@ -54,18 +48,10 @@ package assignmentByAritra;
 	            return false;
 	 
 
-	        // Search for closing bracket for first
-
-	        // opening bracket.
+	
 
 	        char closing = findClosing(expr[0]);
 	 
-
-	        // count is used to handle cases like
-
-	        // "((()))". We basically need to
-
-	        // consider matching closing bracket.
 
 	        int i, count = 0;
 
@@ -88,26 +74,15 @@ package assignmentByAritra;
 	        }
 	 
 
-	        // If we did not find a closing
-
-	        // bracket
-
 	        if (i == n)
 
 	            return false;
 	 
 
-	        // If closing bracket was next
-
-	        // to open
-
-	        if (i == 1)
+		        if (i == 1)
 
 	            return check(Arrays.copyOfRange(expr, i + 1, n), n - 2);
 
-	        // If closing bracket was somewhere
-
-	        // in middle.
 
 	        return check(Arrays.copyOfRange(expr, 1, n), i - 1) && check(Arrays.copyOfRange(expr, (i + 1), n), n - i - 1);
 
